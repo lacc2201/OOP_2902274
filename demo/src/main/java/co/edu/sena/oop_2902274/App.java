@@ -57,6 +57,27 @@ public class App
 
         //salida
         System.out.println("El resultado del numero elevado al cuadrado es:" + result3);20
+
+        // Euros a dolares
+        // entradas
+        // Definir el valor actual de conversión de euros a dólares
+        final double tasaConversion = 1.13;
+
+        // Crear un objeto Scanner para leer la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // Pedir al usuario que introduzca la cantidad en euros
+        System.out.print("Introduce la cantidad en euros: ");
+        double euros = scanner.nextDouble();
+
+        // Calcular la cantidad equivalente en dólares
+        double dolares = euros * tasaConversion;
+
+        // Mostrar el resultado
+        System.out.println(euros + " euros equivale a " + dolares + " dólares.");
+
+        // Cerrar el scanner
+        scanner.close();
     }
 
 }
