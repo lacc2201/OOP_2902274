@@ -78,6 +78,93 @@ public class App
 
         // Cerrar el scanner
         scanner.close();
-    }
 
+
+        // Lado del cuadrado
+        // entrada
+        // Crear un objeto BufferedReader para leer la entrada del usuario
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        // Declarar variable para almacenar el lado del cuadrado
+        double lado = 0;
+
+        // Intentar leer la longitud del lado del cuadrado
+        try {
+            System.out.print("Introduce la longitud del lado del cuadrado: ");
+            lado = Double.parseDouble(reader.readLine());
+        } catch (IOException | NumberFormatException e) {
+            System.out.println("Error al leer la entrada. Asegúrate de ingresar un número válido.");
+            return; // Salir del programa si ocurre un error
+        }
+
+        // Calcular el área y el perímetro del cuadrado
+        double area = lado * lado;
+        double perimetro = 4 * lado;
+
+        // Mostrar el área y el perímetro del cuadrado
+        System.out.println("El área del cuadrado es: " + area);
+        System.out.println("El perímetro del cuadrado es: " + perimetro);
+
+        // Calculo del aréa de un cilindro
+        // Definir los valores del radio y la altura del cilindro
+        double radio = 3.0; // Ejemplo: radio de 3 unidades
+        double altura = 5.0; // Ejemplo: altura de 5 unidades
+
+        // Calcular el área lateral del cilindro
+        double areaLateral = 2 * Math.PI * radio * altura;
+
+        // Calcular el área total del cilindro
+        double areaTotal = 2 * Math.PI * radio * (radio + altura);
+
+        // Calcular el volumen del cilindro
+        double volumen = Math.PI * radio * radio * altura;
+
+        // Mostrar el resultado
+        System.out.println("El área lateral del cilindro es: " + areaLateral);
+        System.out.println("El área total del cilindro es: " + areaTotal);
+        System.out.println("El volumen del cilindro es: " + volumen);
+
+        //RADIO
+         // Definir el radio de la circunferencia
+        double radio = 5.0; // Por ejemplo, un radio de 5 unidades
+
+        // Calcular la longitud de la circunferencia
+        double longitud = 2 * Math.PI * radio;
+
+        // Calcular el área del círculo inscrito
+        double areaCirculoInscrito = Math.pow(Math.PI * radio, 2);
+
+        // Mostrar los resultados
+        System.out.println("La longitud de la circunferencia es: " + longitud);
+        System.out.println("El área del círculo inscrito es: " + areaCirculoInscrito);
+    }
+    public class PromedioTresNumeros {
+        public static void main(String[] args) {
+            // Obtener la consola del sistema
+            java.io.Console console = System.console();
+    
+            // Verificar si la consola está disponible
+            if (console == null) {
+                System.out.println("Ingresa los tres numero a continuacion");
+                return;
+            }
+    
+            // Pedir al usuario que ingrese los tres números uno por uno
+            String input1 = console.readLine("Ingrese el primer número: ");
+            String input2 = console.readLine("Ingrese el segundo número: ");
+            String input3 = console.readLine("Ingrese el tercer número: ");
+    
+            // Convertir los valores de cadena a números
+            double numero1 = Double.parseDouble(input1);
+            double numero2 = Double.parseDouble(input2);
+            double numero3 = Double.parseDouble(input3);
+    
+            // Calcular el promedio
+            double promedio = (numero1 + numero2 + numero3) / 3;
+    
+            // Mostrar el resultado
+            System.out.println("El promedio de los tres números es: " + promedio);
+        }
+    }
+    
 }
